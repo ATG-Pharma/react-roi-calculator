@@ -1,6 +1,6 @@
 {
   "name": "react-roi-calculator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Return on Investment (ROI) React Component to company product with direct competition. Contains table and slide to show how ROI changes per requirements",
   "author": "jahmad7",
   "license": "MIT",

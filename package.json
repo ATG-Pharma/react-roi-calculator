@@ -49,5 +49,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "react-router-dom": "^5.2.0",
+    "react-select": "^3.1.0",
+    "styled-components": "^5.1.1"
+  }
 }

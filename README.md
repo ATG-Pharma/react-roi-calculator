@@ -1,4 +1,4 @@
-![ATG Pharma Inc Logo](https://atg-online-resources.s3.amazonaws.com/logo.png)
+![ATG Pharma Inc Logo](https://atg-online-resources.s3.amazonaws.com/logo.png) {:height="50%" width="50%"}
 
 # react-roi-calculator
 

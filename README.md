@@ -1,4 +1,4 @@
-![ATG Pharma Inc Logo](https://atg-online-resources.s3.amazonaws.com/logo.png) {:height="50%" width="50%"}
+![ATG Pharma Inc Logo](https://atg-online-resources.s3.amazonaws.com/logo.png)
 
 # react-roi-calculator
 
@@ -17,10 +17,10 @@ npm install --save react-roi-calculator
 ## Usage
 
 ```jsx
-import React from 'react'
+import React from 'react';
 
-import { ROICalculator } from 'react-roi-calculator'
-import 'react-roi-calculator/dist/index.css'
+import { ROICalculator } from 'react-roi-calculator';
+import 'react-roi-calculator/dist/index.css';
 
 const App = () => {
   return (
@@ -35,21 +35,21 @@ const App = () => {
       sliderLowerLimit={4000}
       sliderUpperLimit={250000}
     />
-  )
-}
+  );
+};
 
 const companyProductStats = {
   outputPer: 1,
   numOfEmployees: 2,
   wage: 15,
   leasingCost: 800
-}
+};
 
 const competitorInformation = {
   numOfEmployees: 5,
   wage: 15,
   outputPerEmployee: 60
-}
+};
 
 const productArray = [
   { output: 3000, name: 'Capsules' },
@@ -58,9 +58,9 @@ const productArray = [
   { output: 600, name: 'Creams' },
   { output: 600, name: 'Salves' },
   { output: 1200, name: 'Cartridges' }
-]
+];
 
-export default App
+export default App;
 ```
 
 ## Component Inputs

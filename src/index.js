@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import CallToAction from './callToAction'
-import RoiChart from './roiChart'
+import React, { useState } from 'react';
+import CallToAction from './callToAction';
+import RoiChart from './roiChart';
 
 // STYLES
 import {
@@ -12,7 +12,7 @@ import {
   ProductOptions,
   Variable,
   Range
-} from './styles'
+} from './styles';
 
 export const ROICalculator = ({
   productName,
@@ -25,58 +25,60 @@ export const ROICalculator = ({
   sliderLowerLimit,
   sliderUpperLimit
 }) => {
-  const [desiredMonthlyOutput, setDesiredMonthlyOutput] = useState(48)
+  const [desiredMonthlyOutput, setDesiredMonthlyOutput] = useState(48);
   const [selectedProduct, setSelectedProduct] = useState({
     value: defaultProductIndex + 1,
     label: productArray[defaultProductIndex].name
-  })
+  });
   const [productStats, setProductStats] = useState({
     ...companyProductStats,
     productOutput: productArray[selectedProduct.value - 1].output
-  })
+  });
 
   const updateDesiredMonthlyOutput = (event) => {
-    setDesiredMonthlyOutput(event.target.value)
-  }
+    setDesiredMonthlyOutput(event.target.value);
+  };
 
   const handleFillingValueChange = (selectedOption) => {
-    setSelectedProduct(selectedOption)
+    setSelectedProduct(selectedOption);
     setProductStats({
       ...productStats,
       productOutput: productArray[selectedProduct.value - 1].output
-    })
-  }
+    });
+  };
 
   const createCommaNumber = (number) => {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-  }
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
 
   // CALCULATION
   const hoursForProduct =
-    (desiredMonthlyOutput * 1000) / productStats.productOutput
+    (desiredMonthlyOutput * 1000) / productStats.productOutput;
 
   const costToRunProductPerHour =
-    companyProductStats.numOfEmployees * companyProductStats.wage
+    companyProductStats.numOfEmployees * companyProductStats.wage;
 
   const productMonthlyCost =
     companyProductStats.leasingCost * companyProductStats.outputPer +
-    costToRunProductPerHour * hoursForProduct
+    costToRunProductPerHour * hoursForProduct;
 
   const competitorRequiredHours =
     (desiredMonthlyOutput * 1000) /
     (competitorInformation.numOfEmployees *
-      competitorInformation.outputPerEmployee)
+      competitorInformation.outputPerEmployee);
 
   const competitorHourlyCost =
-    competitorInformation.numOfEmployees * competitorInformation.wage
+    competitorInformation.numOfEmployees * competitorInformation.wage;
 
-  const handFillMonthlyCost = competitorHourlyCost * competitorRequiredHours
+  const handFillMonthlyCost = competitorHourlyCost * competitorRequiredHours;
 
-  const difference = createCommaNumber(handFillMonthlyCost - productMonthlyCost)
+  const difference = createCommaNumber(
+    handFillMonthlyCost - productMonthlyCost
+  );
 
   const options = productArray.map((product, index) => {
-    return { value: index, label: product.name }
-  })
+    return { value: index, label: product.name };
+  });
 
   const table = [
     {
@@ -107,7 +109,7 @@ export const ROICalculator = ({
       competitor: createCommaNumber(handFillMonthlyCost),
       company: createCommaNumber(productMonthlyCost)
     }
-  ]
+  ];
 
   return (
     <Container companyColour={companyColour}>
@@ -154,5 +156,5 @@ export const ROICalculator = ({
         <RoiChart data={table} />
       </RoiSection>
     </Container>
-  )
-}
+  );
+};

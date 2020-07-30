@@ -95,4 +95,5 @@ export default App;
 
 Made by [ATG Pharma](https://www.atgpharma.com/) Inc.
 
-MIT © [jahmad7](https://github.com/jahmad7)
+Author [jahmad7](https://github.com/jahmad7)
+MIT © [ATG-Pharma](https://www.atgpharma.com/)

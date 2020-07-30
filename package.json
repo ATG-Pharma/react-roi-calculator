@@ -1,10 +1,10 @@
 {
   "name": "react-roi-calculator",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Return on Investment (ROI) React Component to company product with direct competition. Contains table and slide to show how ROI changes per requirements",
-  "author": "jahmad7",
+  "author": "ATG-Pharma",
   "license": "MIT",
-  "repository": "jahmad7/react-roi-calculator",
+  "repository": "ATG-Pharma/react-roi-calculator",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
